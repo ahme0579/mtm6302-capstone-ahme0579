@@ -1,0 +1,295 @@
+:root {}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc((100vw / 1920) * 10);
+}
+
+body {
+  background-color: #b73b42;
+  overscroll-behavior: none;
+}
+
+@font-face {
+  font-family: 'EarlyGameBoy';
+  src: url('fonts/Early\ GameBoy.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'EarlyGameBoy', sans-serif;
+}
+
+/* layout */
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12.2rem;
+  width: 100vw;
+}
+
+.container {
+  position: relative;
+  padding-top: 4.7rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 10px solid #4a191e;
+}
+
+.container .divider {
+  width: 4.5rem;
+  height: auto;
+  background-color: #45191f;
+  display: flex;
+  justify-content: center;
+  padding: 0 0.75rem;
+}
+
+.container .divider img {
+  width: 100%;
+}
+
+.container>.frame-outline {
+  position: absolute;
+  top: 4.7rem;
+  left: 0;
+  width: 100%;
+  width: 192rem;
+}
+
+.container .left {
+  width: 126rem;
+  height: 100%;
+  padding: 2rem 2rem;
+  padding-top: 15.4rem;
+}
+
+.container .left .content {
+  width: 121.4rem;
+  border: 3px solid #4a191e;
+  border-radius: 10px;
+  height: 100%;
+  padding: 2.4rem;
+}
+
+.container .left .content .inner {
+  border: 1px solid #828e91;
+  background-color: #daeff6;
+  padding: 4.6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container .left .content .inner .header {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .left .content .inner .header h1 {
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 3rem;
+}
+
+.container .left .content .inner .header p {
+  color: #9b3032;
+  font-size: 1.6rem;
+}
+
+.container .left .content .inner .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.8rem;
+  row-gap: 1.5rem;
+}
+
+.container .left .content .inner .gallery .item {
+  width: 24.7rem;
+  height: 29.2rem;
+  border-radius: 20px;
+  background-color: #bccacc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .left .content .inner .gallery .item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container .left .content .inner .gallery .item:hover {
+  border: 5px solid #9b3032;
+}
+
+.container .right {
+  position: relative;
+  height: 100%;
+  width: 61.4rem;
+  padding: 2.3rem 1rem 1rem 1rem;
+}
+
+.container .right .content {
+  position: relative;
+  border: 3px solid #4a191e;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: space-between;
+  padding: 1.4rem 2.2rem;
+}
+
+.container .right .content .display {
+  position: relative;
+}
+
+.container .right .content .display .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.inner img {
+  align-items: center;
+}
+
+.container .right .content .display .inner .name {}
+
+.container .right .content .display .catch-btn {
+  position: absolute;
+  right: 4.5rem;
+  top: 4.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .right .content .display .catch-btn .icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: #f15688;
+}
+
+.container .right .content .display .catch-btn span {
+  font-size: 1.75rem;
+}
+
+.container .right .content .display .inner .name {
+  font-size: 3rem;
+}
+
+.container .right .content .display .inner .tag {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  background-color: #f15688;
+}
+
+.container .right .content .caught-card {
+  position: relative;
+}
+
+.container .right .content .caught-card .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.container .right .content .caught-card .inner .item {
+  border: 3px solid #3c572f;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.content {
+  background-color: #8e2f3c;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 17.7rem;
+  }
+
+  .container .divider {
+    display: none;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .container .right {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .container .right .content {
+    gap: 12rem;
+    padding: 4.5rem;
+  }
+
+  .container .right .content .display .inner .name {
+    font-size: 8.5rem;
+  }
+
+  .container .right .content .display .inner .tag {
+    font-size: 6.5rem;
+  }
+
+  .container .right .content .display .catch-btn {
+    right: 12.5rem;
+    top: 13.5rem;
+  }
+
+  .container .right .content .display .catch-btn .icon {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .container .right .content .display .catch-btn span {
+    font-size: 6.5rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  /* html {
+    font-size: calc((100vw / 428) * 10);
+  } */
+}
