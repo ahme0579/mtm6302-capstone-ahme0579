@@ -4,8 +4,10 @@
 ## 041103459
 ## Pokedex  
 
-I made the mockup with the concept of an actual pokedex from Generation 1 of pokemon, creating a frame as the pokedex. 
-Users are able to interact with the pokedex on the left (on desktop) as they click on each pokemon it appears on the right side display.
-Users are able to catch pokemon using the catch button and on doing so will appear in the "caught pokemon" section.
-I have used fonts referencing the old video games in the Gameboy to create a retro aesthetic
-Mobile users have a similar experience now with two sections for the pokedex and caught pokemon.
+Made some changes to the pokedex instead of pokemon caught showing up ona  different display pokemon show up within the gallery as "caught" is dynamically added along with green highlight. 
+
+Some AI use was implemented to intiate remedial and tasks that I foudn difficult to grasp
+
+Used some youtube videos listed below to gain osme extra knowledge
+https://www.youtube.com/watch?v=56VjdqcdakQ&t=2096s
+https://www.youtube.com/watch?v=T-VQUKeSU1w&t=1495s
